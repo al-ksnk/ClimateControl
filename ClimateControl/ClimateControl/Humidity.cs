@@ -8,5 +8,9 @@ namespace ClimateControl.ClimateControl
 {
     class Humidity
     {
+        private int _humidity;
+
+        public int GetHumidity() => _humidity;
+        public void SetHumidity(int humidity) => _humidity = humidity;
     }
 }

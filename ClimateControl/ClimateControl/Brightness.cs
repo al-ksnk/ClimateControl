@@ -8,5 +8,9 @@ namespace ClimateControl.ClimateControl
 {
     class Brightness
     {
+        private int _brightness;
+
+        public int GetBrightness() => _brightness;
+        public void SetBrightness(int brightness) => _brightness = brightness;
     }
 }
