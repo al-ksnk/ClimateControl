@@ -9,8 +9,10 @@ namespace ClimateControl.ClientSide
 {
     class Application
     {
-        private Database.Database _database;
-        private Climate _climate = new Climate();
+        private Database.Database _database = new Database.Database();
+
+        // was not in lab 3
+        private readonly Climate _climate = new Climate();
 
         public void SelectPreset(Preset preset)
         {
