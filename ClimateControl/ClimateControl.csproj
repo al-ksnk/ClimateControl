@@ -43,11 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientSide\Application.cs" />
+    <Compile Include="ClientSide\Preset.cs" />
+    <Compile Include="ClimateControl\Brightness.cs" />
+    <Compile Include="ClimateControl\Climate.cs" />
+    <Compile Include="ClimateControl\ClimateChangeRequest.cs" />
+    <Compile Include="ClimateControl\Humidity.cs" />
+    <Compile Include="ClimateControl\Temperature.cs" />
+    <Compile Include="Database\Database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
