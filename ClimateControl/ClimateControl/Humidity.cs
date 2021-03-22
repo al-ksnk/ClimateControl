@@ -10,7 +10,14 @@ namespace ClimateControl.ClimateControl
     {
         private int _humidity;
 
+        public Humidity(int humidity)
+        {
+            _humidity = humidity;
+        }
+
         public int GetHumidity() => _humidity;
         public void SetHumidity(int humidity) => _humidity = humidity;
+
+        public override string ToString() => $"{_humidity}%";
     }
 }

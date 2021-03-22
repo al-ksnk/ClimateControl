@@ -10,7 +10,14 @@ namespace ClimateControl.ClimateControl
     {
         private int _brightness;
 
+        public Brightness(int brightness)
+        {
+            _brightness = brightness;
+        }
+
         public int GetBrightness() => _brightness;
         public void SetBrightness(int brightness) => _brightness = brightness;
+
+        public override string ToString() => $"{_brightness}%";
     }
 }

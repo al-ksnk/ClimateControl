@@ -9,13 +9,14 @@ namespace ClimateControl.ClientSide
 {
     class Application
     {
-        private Database.Database _database = new Database.Database();
+        private readonly Database.Database _database = new Database.Database();
 
         // was not in lab 3
         private readonly Climate _climate = new Climate();
 
-        public void SelectPreset(Preset preset)
+        public void SelectPreset(string presetName)
         {
+            Preset preset = _database.GetPresets().First(p => p.GetName() == presetName);
             ClimateChangeRequest request = new ClimateChangeRequest(preset.GetTemperature(), preset.GetBrightness(), preset.GetHumidity());
             _climate.SetClimate(request);
         }
