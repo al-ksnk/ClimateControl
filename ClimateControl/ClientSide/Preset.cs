@@ -15,9 +15,9 @@ namespace ClimateControl.ClientSide
         private readonly Brightness _brightness;
         private readonly Humidity _humidity;
 
-        public Preset(string name, Temperature temperature, Brightness brightness, Humidity humidity)
+        public Preset(int id, string name, Temperature temperature, Brightness brightness, Humidity humidity)
         {
-            _id = name?.GetHashCode() ?? throw new ArgumentNullException();
+            _id = id;
             _name = name;
             _temperature = temperature;
             _brightness = brightness;

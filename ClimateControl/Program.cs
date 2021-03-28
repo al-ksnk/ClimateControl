@@ -50,7 +50,7 @@ namespace ClimateControl
                             Console.WriteLine(Application.NotifyOfClimate());
                             break;
                         case "5":
-                            Console.Write("Choose a preset: ");
+                            Console.WriteLine("Choose a preset: ");
                             foreach (Preset p in new Database.Database().GetPresets())
                             {
                                 Console.WriteLine(p);

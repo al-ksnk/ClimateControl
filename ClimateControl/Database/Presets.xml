@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Presets>
+  <Preset>
+    <Id>986524</Id>
+    <Name>Ocean Avenue</Name>
+    <Temperature>30</Temperature>
+    <Brightness>70</Brightness>
+    <Humidity>70</Humidity>
+  </Preset>
+  <Preset>
+    <Id>852164</Id>
+    <Name>Forest Adventure</Name>
+    <Temperature>20</Temperature>
+    <Brightness>45</Brightness>
+    <Humidity>75</Humidity>
+  </Preset>
+  <Preset>
+    <Id>984136</Id>
+    <Name>Swedish Winter</Name>
+    <Temperature>20</Temperature>
+    <Brightness>30</Brightness>
+    <Humidity>60</Humidity>
+  </Preset>
+  <Preset>
+    <Id>021698</Id>
+    <Name>Australian Paradise</Name>
+    <Temperature>32</Temperature>
+    <Brightness>85</Brightness>
+    <Humidity>55</Humidity>
+  </Preset>
+  <Preset>
+    <Id>526681</Id>
+    <Name>Night Relaxation</Name>
+    <Temperature>24</Temperature>
+    <Brightness>0</Brightness>
+    <Humidity>50</Humidity>
+  </Preset>
+</Presets>

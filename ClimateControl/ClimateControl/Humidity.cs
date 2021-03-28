@@ -16,7 +16,7 @@ namespace ClimateControl.ClimateControl
         }
 
         public int GetHumidity() => _humidity;
-        public void SetHumidity(int humidity) => humidity  = humidity >= 0 && humidity <= 100 ? humidity : throw new InvalidOperationException();
+        public void SetHumidity(int humidity) => _humidity = humidity >= 0 && humidity <= 100 ? humidity : throw new InvalidOperationException();
 
         public override string ToString() => $"{_humidity}%";
     }
