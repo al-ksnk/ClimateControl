@@ -8,9 +8,9 @@ namespace ClimateControl.ClimateControl
 {
     class Climate
     {
-        private Temperature _temperature;
-        private Brightness _brightness;
-        private Humidity _humidity;
+        private Temperature _temperature = new Temperature(25);
+        private Brightness _brightness = new Brightness(50);
+        private Humidity _humidity = new Humidity(30);
 
         public Temperature GetTemperature() => _temperature;
         public Brightness GetBrightness() => _brightness;
@@ -18,9 +18,20 @@ namespace ClimateControl.ClimateControl
 
         public void SetClimate(ClimateChangeRequest request)
         {
-            _temperature = request.GetTemperature() ?? _temperature;
-            _brightness = request.GetBrightness() ?? _brightness;
-            _humidity = request.GetHumidity() ?? _humidity;
+            if (request.GetTemperature() != null)
+            {
+                _temperature.SetTemperature(request.GetTemperature().GetTemperature());
+            }
+
+            if (request.GetBrightness() != null)
+            {
+                _brightness.SetBrightness(request.GetBrightness().GetBrightness());
+            }
+
+            if (request.GetHumidity() != null)
+            {
+                _humidity.SetHumidity(request.GetHumidity().GetHumidity());
+            }
         }
 
         public override string ToString()
@@ -29,7 +40,7 @@ namespace ClimateControl.ClimateControl
             sb.Append("Current climate:\n");
             sb.Append($"---> Temperature: {_temperature}\n");
             sb.Append($"---> Brightness: {_brightness}\n");
-            sb.Append($"---> Humidity: {_humidity}\n");
+            sb.Append($"---> Humidity: {_humidity}");
             return sb.ToString();
         }
     }

@@ -16,7 +16,7 @@ namespace ClimateControl.ClimateControl
         }
 
         public int GetTemperature() => _temperature;
-        public int SetTemperature(int temperature) => _temperature = temperature;
+        public int SetTemperature(int temperature) => temperature >= 10 && temperature <= 50 ? temperature : throw new InvalidOperationException();
 
         public override string ToString() => $"{_temperature}*C";
     }

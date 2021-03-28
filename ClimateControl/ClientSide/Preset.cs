@@ -32,7 +32,6 @@ namespace ClimateControl.ClientSide
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("Current climate:\n");
             sb.Append($"---> Name: {_name}\n");
             sb.Append($"---> Temperature: {_temperature}\n");
             sb.Append($"---> Brightness: {_brightness}\n");

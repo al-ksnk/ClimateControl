@@ -16,7 +16,7 @@ namespace ClimateControl.ClimateControl
         }
 
         public int GetBrightness() => _brightness;
-        public void SetBrightness(int brightness) => _brightness = brightness;
+        public void SetBrightness(int brightness) => _brightness = brightness >= 0 && brightness <= 100 ? brightness : throw new InvalidOperationException();
 
         public override string ToString() => $"{_brightness}%";
     }

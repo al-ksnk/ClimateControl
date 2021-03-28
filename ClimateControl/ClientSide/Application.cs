@@ -16,7 +16,7 @@ namespace ClimateControl.ClientSide
 
         public void SelectPreset(string presetName)
         {
-            Preset preset = _database.GetPresets().First(p => p.GetName() == presetName);
+            Preset preset = _database.GetPresets().FirstOrDefault(p => p.GetName() == presetName) ?? throw new InvalidOperationException();
             ClimateChangeRequest request = new ClimateChangeRequest(preset.GetTemperature(), preset.GetBrightness(), preset.GetHumidity());
             _climate.SetClimate(request);
         }
